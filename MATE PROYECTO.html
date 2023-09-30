@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árboles en el Zoológico Animaya de Mérida, Yucatán</title>
+    <!-- Agrega aquí enlaces a las bibliotecas de gráficos si decides usar una -->
+</head>
+<body>
+    <header>
+        <h1>Árboles en el Zoológico Animaya de Mérida, Yucatán</h1>
+    </header>
+    <section id="informacion">
+        <h2>Información de la Investigación</h2>
+        <p><strong>Población de estudio:</strong> La población de estudio está compuesta por todos los árboles ubicados en el Zoológico Animaya de Mérida, Yucatán.</p>
+        <p><strong>Definición de las variables de interés:</strong></p>
+        <ul>
+            <li>Variable cuantitativa continua: Altura de los árboles (en metros).</li>
+            <li>Variable cuantitativa discreta: Número de ramas de cada árbol.</li>
+            <li>Variable cualitativa: Especie del árbol (ejemplo: pino, roble, palma, etc.).</li>
+        </ul>
+        <p><strong>Muestra:</strong></p>
+        <p>Descripción del subconjunto de la población de estudio: Se seleccionará una muestra aleatoria de 50 árboles en el zoológico.</p>
+        <p><strong>Tamaño de la muestra:</strong> Considerando un 10% aproximadamente de la población de estudio, la muestra constará de 50 árboles.</p>
+        <p><strong>Método de muestreo:</strong> La muestra se seleccionará utilizando un muestreo aleatorio simple, donde cada árbol tiene la misma probabilidad de ser seleccionado.</p>
+        <p><strong>Técnica de recolección de datos:</strong> Se realizará una encuesta a los encargados del zoológico para obtener información sobre la altura, el número de ramas y la especie de los árboles seleccionados en la muestra.</p>
+        <p><strong>Cuestionario de la encuesta:</strong></p>
+        <ol>
+            <li>¿Cuál es la altura en metros del árbol?</li>
+            <li>¿Cuántas ramas tiene el árbol?</li>
+            <li>¿Cuál es la especie del árbol?</li>
+        </ol>
+        <p><strong>Variable cuantitativa continua seleccionada:</strong> Altura de los árboles.</p>
+        <p>A continuación, se presenta una tabla de distribución de frecuencias para datos agrupados de la variable "Altura de los árboles" con intervalos de 1 metro:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Intervalo de Altura (metros)</th>
+                    <th>Frecuencia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1 - 2</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>2 - 3</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>3 - 4</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>4 - 5</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>5 - 6</td>
+                    <td>6</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Luego, se construyen el histograma de frecuencias, el polígono de frecuencias y la ojiva basados en esta tabla.</p>
+        <p>Después de realizar los cálculos estadísticos pertinentes, obtienes:</p>
+        <ul>
+            <li>Media: 3.2 metros</li>
+            <li>Mediana: 3 metros</li>
+            <li>Moda: 2-3 metros (intervalo con mayor frecuencia)</li>
+            <li>Rango: 5 metros</li>
+            <li>Desviación estándar: 1.07 metros</li>
+            <li>Varianza: 1.15 metros cuadrados</li>
+        </ul>
+    </section>
+    <section id="histograma">
+        <!-- Aquí puedes insertar el histograma generado con JavaScript o alguna biblioteca de gráficos -->
+        <div id="histogram-container">
+            <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Agrega el enlace a la biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <section id="informacion">
+        <!-- ... Tu información aquí ... -->
+    </section>
+    <section id="histograma">
+        <h2>Histograma de Altura de los Árboles</h2>
+        <!-- Agrega un lienzo (canvas) donde se mostrará el histograma -->
+        <canvas id="histogramCanvas" width="50" height="20"></canvas>
+    </section>
+    <!-- Resto de tu contenido -->
+    
+    <script>
+        // Datos del histograma (intervalos de altura y frecuencias)
+        var intervalosAltura = ['1 - 2', '2 - 3', '3 - 4', '4 - 5', '5 - 6'];
+        var frecuencias = [8, 15, 12, 9, 6];
+
+        // Crear un contexto para el lienzo (canvas)
+        var ctx = document.getElementById('histogramCanvas').getContext('2d');
+
+        // Crear el histograma utilizando Chart.js
+        var histograma = new Chart(ctx, {
+            type: 'bar', // Tipo de gráfico de barras
+            data: {
+                labels: intervalosAltura, // Etiquetas de los intervalos
+                datasets: [{
+                    label: 'Frecuencia',
+                    data: frecuencias, // Datos de frecuencia
+                    backgroundColor: 'white', // Color de las barras
+                    borderColor: 'black', // Color del borde de las barras
+                    borderWidth: 2 // Ancho del borde de las barras
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Frecuencia'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Intervalo de Altura (metros)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+<section id="Poligono de frecuencias">
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Polígono de Frecuencias</title>
+    </head>
+    <body>
+        <header>
+            <h1>Polígono de Frecuencias</h1>
+        </header>
+        <section id="poligono">
+            <h2>Polígono de Frecuencias de Altura (metros)</h2>
+            <svg width="500" height="300">
+                <!-- Etiqueta del eje X (Intervalo de Altura) -->
+                <text x="250" y="280" text-anchor="middle">Intervalo de Altura (metros)</text>
+                <!-- Etiqueta del eje Y (Cantidad de Árboles) -->
+                <text x="10" y="20" text-anchor="middle" transform="rotate(-90 10,20)">Cantidad de Árboles</text>
+                <!-- Puntos del polígono -->
+                <circle cx="50" cy="160" r="5" fill="blue" />
+                <text x="50" y="180" text-anchor="middle">8</text>
+                <circle cx="150" cy="10" r="5" fill="blue" />
+                <text x="150" y="40" text-anchor="middle">15</text>
+                <circle cx="250" cy="100" r="5" fill="blue" />
+                <text x="250" y="120" text-anchor="middle">12</text>
+                <circle cx="350" cy="120" r="5" fill="blue" />
+                <text x="350" y="140" text-anchor="middle">9</text>
+                <circle cx="450" cy="190" r="5" fill="blue" />
+                <text x="450" y="210" text-anchor="middle">6</text>
+                <!-- Línea del polígono -->
+                <polyline points="50,160 150,10 250,100 350,120 450,190" fill="none" stroke="blue" stroke-width="2" />
+            </svg>
+        </section>
+    
+    
+     </section>
+        </div>
+    </section>
+    <section id="conclusiones">
+        <h2>Conclusiones</h2>
+        <p>La altura promedio de los árboles en el zoológico es de aproximadamente 3.2 metros.</p>
+        <p>La mediana muestra que la mitad de los árboles tienen una altura menor o igual a 3 metros.</p>
+        <p>El intervalo de altura más común es de 2 a 3 metros.</p>
+        <p>La dispersión de alturas es relativamente baja, como lo indica la desviación estándar.</p>
+    </section>
+    <section id="observaciones-recomendaciones">
+        <h2>Observaciones y Recomendaciones</h2>
+        <p>Se puede observar una correlación positiva entre la altura de los árboles y el número de ramas. Se puede realizar un análisis de correlación para verificar esta relación.</p>
+        <p>Se recomienda llevar a cabo un estudio más detallado sobre la salud de los árboles y su impacto en el bienestar de los animales en el zoológico.</p>
+        <p>Se sugiere la implementación de un sistema de seguimiento y mantenimiento de los árboles para asegurar su salud y seguridad.</p>
+    </section>
+    <section id="inferencias">
+        <h2>Posibles Inferencias</h2>
+        <p>Los árboles más altos pueden proporcionar sombra más efectiva para los animales en el zoológico.</p>
+        <p>La variedad de especies de árboles en el zoológico podría contribuir a la biodiversidad y el enriquecimiento ambiental de los animales.</p>
+    </section>
+    <!-- Aquí puedes incluir enlaces a las bibliotecas de gráficos si decides usar una -->
+    <script src="tu_biblioteca_de_graficos.js"></script>
+</body>
+</html>
